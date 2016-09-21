@@ -132,3 +132,28 @@ https://wiki.jenkins-ci.org/display/JENKINS/Nuget+Plugin
 ## SonarQube API Key
 As of SonarQube 5, it requires an API Key.
 * **Zephyr:** 5459d8e4d84302dbf9578db5192c37b7b092a7b9
+
+
+## Test Coverage
+
+Requirements:
+* [OpenCover](https://github.com/OpenCover/opencover/wiki)
+* register open cover x64 profiler
+  ```
+    regsvr32 /s C:\Users\derek.wilson\AppData\Local\Apps\OpenCover\x64\OpenCover.Profiler.dll
+  ```
+* XUnitRunner Package
+* run xunit with -noshadow
+
+```
+stage('Lib::UnitTests') {
+    bat '"C:\\Users\\Joost\\AppData\\Local\\Apps\\OpenCover\\OpenCover.Console.exe" -output:"opencover.xml" -register:Path64 -target:"packages\\xunit.runner.console.2.1.0\\tools\\xunit.console.exe" -targetargs:"Coesd.Lib.Cs.ConsoleWriteTest\\bin\\Debug\\Coesd.Lib.Cs.ConsoleWriteTest.dll -xml XUnitResults.xml -noshadow" -filter:"+[*]* -[Coesd.Lib.Cs.ConsoleWriteTest]*"'
+}
+```
+
+**Example**
+* From [Derek Wilson](http://derekwilson.net/derekblog/post/2012/05/29/using-opencover-and-xunit.aspx)
+```
+C:\Users\derek.wilson\AppData\Local\Apps\OpenCover\opencover.console -output:coverage.xml -target:"C:\Program Files (x86)\xUnit\xunit.console.clr4.exe" -targetargs:"MyApp.xunit" -filter:"+[*]MyApp.* -[*.Tests]*"
+C:\Users\derek.wilson\AppData\Local\Apps\ReportGenerator\bin\reportgenerator coverage.xml .\coverage
+```
