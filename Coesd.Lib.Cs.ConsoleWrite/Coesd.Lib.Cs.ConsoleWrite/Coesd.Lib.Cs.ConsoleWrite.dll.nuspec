@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Coesd.Lib.Cs.ConsoleWrite.dll</id>
+    <version>1.0.1</version>
+    <authors>Michael Bentley</authors>
+    <owners>ABN AMRO</owners>
+    <projectUrl>https://social.connect.abnamro.com/communities/service/html/communitystart?communityUuid=e9f91631-e672-4478-a72c-ac0b22e2c282</projectUrl>
+    <iconUrl>https://social.connect.abnamro.com/files/form/anonymous/api/library/88de2925-619d-415f-902b-62aaac4de34f/document/9e33b00e-e1ce-4654-a880-b5c3b0fb6bdf/media/ABNAMRO.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Class Library to write specified text to the Console</description>
+    <releaseNotes>Class Library to write text to the Console. Created to demonstrate building a Console application using the Microsoft CI-CD pipeline</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>ABNAMRO COESD CICD</tags>
+  </metadata>
+</package>

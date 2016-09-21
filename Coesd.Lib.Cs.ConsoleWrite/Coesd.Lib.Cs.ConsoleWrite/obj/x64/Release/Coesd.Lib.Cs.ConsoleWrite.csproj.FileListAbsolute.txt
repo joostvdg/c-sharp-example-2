@@ -1,0 +1,2 @@
+C:\Users\Public\VS\Projects\Coesd.Lib.Cs.ConsoleWrite\Coesd.Lib.Cs.ConsoleWrite\bin\x64\Release\Coesd.Lib.Cs.ConsoleWrite.dll
+C:\Users\Public\VS\Projects\Coesd.Lib.Cs.ConsoleWrite\Coesd.Lib.Cs.ConsoleWrite\obj\x64\Release\Coesd.Lib.Cs.ConsoleWrite.dll
