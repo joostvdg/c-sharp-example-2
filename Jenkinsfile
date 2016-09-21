@@ -15,7 +15,7 @@ node ('windows') {
           stage('Lib::Build'){
               def msbuildHome = tool name: 'default', type: 'hudson.plugins.msbuild.MsBuildInstallation'
               echo "msbuildHome=${msbuildHome}"
-              bat "\"${msbuildHome}\\msbuild\" /t:Rebuild"
+              bat "\"${msbuildHome}\\msbuild\" /t:Rebuild /p:Configuration=Release /p:Platform=x64"
           }
 
           stage('Lib::Sonar Finish'){
@@ -46,7 +46,7 @@ node ('windows') {
           stage('Sse::Build'){
               def msbuildHome = tool name: 'default', type: 'hudson.plugins.msbuild.MsBuildInstallation'
               echo "msbuildHome=${msbuildHome}"
-              bat "\"${msbuildHome}\\msbuild\" /t:Rebuild"
+              bat "\"${msbuildHome}\\msbuild\" /t:Rebuild /p:Configuration=Release /p:Platform=x64"
           }
 
           stage('Sse::Sonar Finish'){
